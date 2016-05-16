@@ -24,6 +24,7 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
+    byebug
     @product = Product.new(product_params)
 
     respond_to do |format|
@@ -64,6 +65,7 @@ class ProductsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
+     # byebug
       @product = Product.find(params[:id])
     end
 
